@@ -25,22 +25,37 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
+/**
+ * @brief Datos usuario 1. 
+ * 
+ */
 static const struct alumno_s ESTEBAN_VOLENTINI = {
     .apellidos = "VOLENTINI",
     .nombres = "Esteban Daniel",
     .documento = "23.517.968",
 };
-
+/**
+ * @brief Datos usuario 2. 
+ * 
+ */
 static const struct alumno_s JOSE_ALVARADO = {
     .apellidos = "ALVARADO",
     .nombres = "Jose David",
     .documento = "81.740.023",
 };
-
+/**
+ * @brief Declaracion de la constante de los punteros de alumnos.  
+ * 
+ */
 const alumno_t ALUMNOS[] = {
     &ESTEBAN_VOLENTINI,
     &JOSE_ALVARADO,
 };
+
+/**
+ * @brief Calculo del numero de alumnos. 
+ * 
+ */
 
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
@@ -51,6 +66,16 @@ const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 /*=====[Implementations of public functions]=================================*/
 
 /*=====[Implementations of interrupt functions]==============================*/
+
+/**
+ * @brief Crea cadena de caractares con datos del alumno
+ * 
+ * @param cadena    Puntero string en donde se almacenan los datos de alumno.  
+ * @param espacio   Entero sin signo.
+ * @param alumno    Variable de la estructura alumno_s
+ * @return true 
+ * @return false 
+ */
 
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     int resultado;
