@@ -67,16 +67,6 @@ const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Implementations of interrupt functions]==============================*/
 
-/**
- * @brief Crea cadena de caractares con datos del alumno
- * 
- * @param cadena    Puntero string en donde se almacenan los datos de alumno.  
- * @param espacio   Entero sin signo.
- * @param alumno    Variable de la estructura alumno_s
- * @return true 
- * @return false 
- */
-
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     int resultado;
     const char FORMATO[] = "{"
